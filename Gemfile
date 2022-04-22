@@ -23,6 +23,11 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 
 gem 'devise'
+gem 'carrierwave', '~> 2.0'
+gem "mini_magick"
+group :development, :test do
+  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+end
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

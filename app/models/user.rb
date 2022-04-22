@@ -9,6 +9,8 @@ class User < ApplicationRecord
 
   enum gender: { man: 0, woman: 1 }
   # genderカラムに0が保存されていれば、「man」、1が保存されていれば「woman」という定数として扱える
+
+  mount_uploader :profile_image, ProfileImageUploader
   
   def update_without_current_password(params, *options)
 
