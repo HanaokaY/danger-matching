@@ -5,7 +5,7 @@ User.create!(
   name: 'エマ',
   self_introduction: '音楽と猫と美味しいものが好き！',
   gender: 1,
-  profile_image: open('app/assets/images/1.jpg')
+  profile_image: open('public/assets/images/1.jpg')
 )
 User.create!(
   email: 'user2@gmail.com',
