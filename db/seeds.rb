@@ -5,7 +5,7 @@ User.create!(
   name: 'エマ',
   self_introduction: '音楽と猫と美味しいものが好き！',
   gender: 1,
-  profile_image: open("#{Rails.root}/db/dummy_images/1.jpg")
+  profile_image: open(asset_path(1.jpg))
 )
 User.create!(
   email: 'user2@gmail.com',
@@ -52,6 +52,6 @@ User.create!(
     password: '11111111',
     name: 'HIKI',
     self_introduction: '1日10本タバコ吸います。',
-    gender: 0,
+    gender: 1,
     profile_image: open("#{Rails.root}/db/dummy_images/7.jpg")
   )
