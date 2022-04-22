@@ -2,15 +2,15 @@ p "create Users"
 User.create!(
   email: 'user1@gmail.com',
   password: '11111111',
-  name: 'エマ',
+  name: '近所の美女',
   self_introduction: '音楽と猫と美味しいものが好き！',
   gender: 1,
-  profile_image: asset_path("1.jpg")
+  profile_image: open("#{Rails.root}/db/dummy_images/1.jpg")
 )
 User.create!(
   email: 'user2@gmail.com',
   password: '11111111',
-  name: 'オリビア',
+  name: '南区の刺客',
   self_introduction: 'クリエイターさんと話してみたい。',
   gender: 1,
   profile_image: open("#{Rails.root}/db/dummy_images/2.jpg")
@@ -18,7 +18,7 @@ User.create!(
 User.create!(
   email: 'user3@gmail.com',
   password: '11111111',
-  name: 'エヴァ',
+  name: 'ダチ姐さん',
   self_introduction: 'プロフィールをご覧いただきありがとうございます。東京でWebマーケティング関連の仕事をしています。',
   gender: 1,
   profile_image: open("#{Rails.root}/db/dummy_images/3.jpg")
@@ -26,7 +26,7 @@ User.create!(
 User.create!(
   email: 'user4@gmail.com',
   password: '11111111',
-  name: 'ノア',
+  name: '佐々木',
   self_introduction: '東京で美容師をしています。',
   gender: 0,
   profile_image: open("#{Rails.root}/db/dummy_images/4.jpg")
@@ -34,7 +34,7 @@ User.create!(
 User.create!(
   email: 'user5@gmail.com',
   password: '11111111',
-  name: 'リアム',
+  name: '東区の刺客',
   self_introduction: '普段は公認会計士として働いています',
   gender: 0,
   profile_image: open("#{Rails.root}/db/dummy_images/5.jpg")
@@ -42,7 +42,7 @@ User.create!(
 User.create!(
   email: 'user6@gmail.com',
   password: '11111111',
-  name: 'オリバー',
+  name: 'オリバ',
   self_introduction: '週3日くらい1人ラーメンします',
   gender: 0,
   profile_image: open("#{Rails.root}/db/dummy_images/6.jpg")
@@ -51,7 +51,7 @@ User.create!(
     email: 'user7@gmail.com',
     password: '11111111',
     name: 'HIKI',
-    self_introduction: '1日10本タバコ吸います。',
+    self_introduction: '韓国からの刺客。1日10本タバコ吸います。',
     gender: 1,
     profile_image: open("#{Rails.root}/db/dummy_images/7.jpg")
   )
