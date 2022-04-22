@@ -5,7 +5,21 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   validates :name, presence: true
+  validates :self_introduction, length: { maximum: 500 }
 
   enum gender: { man: 0, woman: 1 }
   # genderカラムに0が保存されていれば、「man」、1が保存されていれば「woman」という定数として扱える
+  
+  def update_without_current_password(params, *options)
+
+    if params[:password].blank? && params[:password_confirmation].blank?
+      params.delete(:password)
+      params.delete(:password_confirmation)
+    end
+
+    result = update(params, *options)
+    clean_up_passwords
+    result
+  end
+
 end
