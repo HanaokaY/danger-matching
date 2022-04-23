@@ -1,24 +1,26 @@
-# README
+### 概要
+Tinder風簡易マッチングアプリを作成して、<br>
+Webアプリケーションを最後まで作りきることも目的としています。<br>
+<br>
+使用技術は下記になります。<br>
+HTML・CSS・JavaScript・Rubyを使用<br>
+データベースはPostgresql<br>
+中間テーブルも使用しています。<br>
+本番環境はherokuにデプロイしています。<br>
+<br>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### 使用
+1. マッチングしたユーザー間でチャットすることができる
+2. トプ画の変更ができる
 
-Things you may want to cover:
+### 構成
 
-* Ruby version
+### 更新予定
+herokuの本番環境では画像の生成ができないという使用があるらしく、<br>
+現状はバイナリデータをデータベースに保存して、それをviewに表示させる際にデコードしている形をとっています。<br>
+これをAWS S3を使用する形式に変更する予定。
 
-* System dependencies
+### 開発時の基本操作
+- 本番環境(heroku)のポスグレ接続
+  - heroku pg:psql
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
