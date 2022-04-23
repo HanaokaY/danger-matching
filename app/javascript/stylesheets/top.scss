@@ -4,6 +4,7 @@
     height: 100vh;
     padding: 0;
     border-radius: 0;
+    font-family: 'Sacramento', cursive;
   }
   
   .text-top-color {
@@ -19,6 +20,11 @@
     transform: translate(-50%,-50%);
     letter-spacing: 2px;
     white-space: nowrap;
+      h1{
+        font-family: 'Sacramento', cursive;
+        font-size: 100px;
+        color:#ffe358;
+      }
   }
   
   .top-authentication {
