@@ -4,7 +4,7 @@
       <% if @chat_room_user.image_binary.nil? %>
         <div class="chat-message__partner-default-img"></div>
       <% else %>
-        <%= image_tag "data:image/png;base64," + chat_message.user.image_binary, class: @user.image_binary, class: "chat-message__partner-img" %>
+        <%= image_tag "data:image/png;base64," + chat_message.user.image_binary, class: @chat_room_user.image_binary, class: "chat-message__partner-img" %>
       <% end %>
 
       <div class="chat-message__content">
