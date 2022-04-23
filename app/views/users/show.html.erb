@@ -8,7 +8,7 @@
     <% else %>
       <%= image_tag  "data:image/png;base64," + @user.image_binary, class: @user.image_binary ? "profile-img" : "profile-default-img" %>
     <% end %>
-<%raise%>
+
     <div class="profile-name mt-4">
         <%= @user.name %>
     </div>
