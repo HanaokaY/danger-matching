@@ -6,8 +6,10 @@
     </span>
   <% end %>
 
-  <%= link_to "#", class: "nav-item nav-link" do %>
-    <i class="fas fa-comments fa-lg inherit"></i>
+  <%= link_to matching_index_path, class: "nav-item nav-link" do %>
+    <span class="<%= 'active' if current_page?(matching_index_path) %>">
+      <i class="fas fa-comments fa-lg inherit"></i>
+    </span>
   <% end %>
 
   <%= link_to user_path(@user), class: "nav-item nav-link" do %>
@@ -15,5 +17,5 @@
       <i class="fas fa-user fa-lg inherit"></i>
     </span>
   <% end %>
-  
+
 </nav>
