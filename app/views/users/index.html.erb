@@ -13,7 +13,7 @@
           <% if user.profile_image.url.nil? %>
             <div class="profile-default-img"></div>
           <% else %>
-            <%= image_tag asset_path(user.profile_image.url), class: "profile-img" %>
+            <%= image_tag url_for(user.profile_image.url), class: "profile-img" %>
           <% end %>
           <p class="profile-name">
             <%= user.name %>
