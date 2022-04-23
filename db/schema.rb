@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 2022_04_22_051332) do
     t.integer "gender", default: 0, null: false
     t.text "self_introduction"
     t.string "profile_image"
+    t.string "image_binary"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
