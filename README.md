@@ -24,3 +24,7 @@ herokuの本番環境では画像の生成ができないという使用があ�
 - 本番環境(heroku)のポスグレ接続
   - heroku pg:psql
 
+- local環境のポスグレ
+  - psql -lで一旦確認
+  - psql -h localhost -U hanaokayudai -d danger_match_development
+
