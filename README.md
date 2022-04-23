@@ -14,6 +14,14 @@ HTML・CSS・JavaScript・Rubyを使用<br>
 2. トプ画の変更ができる
 
 ### 構成
+- chat_room
+  - 部屋番号
+
+- chat_room_users
+  - 同じ部屋のユーザー二人
+
+- chat_messages
+  - chat_room_idで判別
 
 ### 更新予定
 herokuの本番環境では画像の生成ができないという使用があるらしく、<br>
