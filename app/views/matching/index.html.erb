@@ -4,25 +4,23 @@
   <div class="matching">
     <p class="matching-title ml-3">メッセージ</p>
     <p class="matching-num">マッチング中のお相手 <%= @match_users.size %>人</p>
-
     <div class="matching__list">
-      <% unless @match_users.empty? %>
-        <% @match_users.each do |user| %>
-         <div class="matching__person">
-
-           <% if user.image_binary.nil? %>
-             <div class="matching__person-default-img"></div>
-           <% else %>
-             <%= image_tag "data:image/png;base64," + user.image_binary, class: "matching__person-img" %>
-           <% end %>
-
-           <div class="matching__person-name">
-             <%= user.name %>
-           </div>
-
-         </div>
+        <% unless @match_users.empty? %>
+            <% @match_users.each do |user| %>
+                <%= link_to chat_rooms_path(params: { user_id: user.id }), method: :post do %>
+                    <div class="matching__person">
+                        <% if user.image_binary.nil? %>
+                            <div class="matching__person-default-img"></div>
+                        <% else %>
+                            <%= image_tag "data:image/png;base64," + user.image_binary, class: "matching__person-img" %>
+                        <% end %>
+                        <div class="matching__person-name">
+                            <%= user.name %>
+                        </div>
+                    </div>
+                <% end %>
+            <% end %>
         <% end %>
-      <% end %>
     </div>
   </div>
 

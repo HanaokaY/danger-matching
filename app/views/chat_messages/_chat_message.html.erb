@@ -1,0 +1,21 @@
+<div class="chat-message">
+  <% if chat_message.user.id != current_user.id %>
+    <div class="chat-message__partner">
+      <% if @chat_room_user.image_binary.nil? %>
+        <div class="chat-message__partner-default-img"></div>
+      <% else %>
+        <%= image_tag "data:image/png;base64," + chat_message.user.image_binary, class: @user.image_binary, class: "chat-message__partner-img" %>
+      <% end %>
+
+      <div class="chat-message__content">
+        <%= chat_message.content %>
+      </div>
+    </div>
+  <% else %>
+    <div class="chat-message__current-user">
+      <div class="chat-message__content main-color-bg">
+        <%= chat_message.content %>
+      </div>
+    </div>
+  <% end %>
+</div>
