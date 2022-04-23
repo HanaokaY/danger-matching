@@ -10,10 +10,10 @@
     <div class="swipe--cards">
       <% @users.each do |user| %>
         <div class="swipe--card" id="<%= user.id %>">
-          <% if @user.image_binary.nil? %>
+          <% if user.image_binary.nil? %>
             <div class="profile-default-img"></div>
           <% else %>
-            <%= image_tag "data:image/png;base64," + @user.image_binary, class: "profile-img" %>
+            <%= image_tag "data:image/png;base64," + user.image_binary, class: "profile-img" %>
           <% end %>
           <p class="profile-name">
             <%= user.name %>
