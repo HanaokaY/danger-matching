@@ -6,7 +6,7 @@
     <% if @user.profile_image.url.nil? %>
       <div class="profile-default-img"></div>
     <% else %>
-      <%= image_tag "data:image/png;base64," + @user.image_binary, class: "profile-img" %>
+      <%= image_tag  "data:image/png;base64," + @user.image_binary, class: @user.image_binary ? "profile-img" : "profile-default-img" %>
     <% end %>
 
     <div class="profile-name mt-4">
