@@ -18,15 +18,17 @@
           <p class="profile-name">
             <%= user.name %>
           </p>
+          <div class="profile-introduction">
+            <p><%= user.self_introduction %></p>
+          </div>
         </div>
       <% end %>
       <div class="no-user">これ以上はいないよ</div>
     </div>
-
-    <div class="swipe--buttons">
+    <%# <div class="swipe--buttons">
       <button id="dislike"><i class="fas fa-times fa-2x"></i></button>
       <button id="like"><i class="fas fa-heart fa-2x"></i></button>
-    </div>
+    </div> %>
   </div>
 
 </div>

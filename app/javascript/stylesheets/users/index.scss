@@ -21,11 +21,16 @@
         object-fit: cover;
       }
       &-name {
-        position: absolute;
-        bottom: 5px;
+        // position: absolute;
+        // bottom: 5px;
         color: #fff;
         font-weight: bold;
         font-size: 24px;
+      }
+      &-introduction{
+        color: black;
+        font-weight: bold;
+        font-size: 1rem;
       }
     }
   }
